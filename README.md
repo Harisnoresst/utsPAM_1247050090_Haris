@@ -31,14 +31,14 @@ Kopi dan Nyemil adalah aplikasi mobile berbasis Android untuk pemesanan makanan 
 
 ## Screenshot Tampilan
 
-| Splash & Welcome | Sign Up | Login |
-| :---: | :---: | :---: |
-| ![Splash](screenshots/welcome.png) | ![Sign Up](screenshots/signup.png) | ![Login](screenshots/login.png) |
+|         Splash & Welcome          |              Sign Up              |             Login              |
+|:---------------------------------:|:---------------------------------:|:------------------------------:|
+| ![Splash](screenshot/welcome.png) | ![Sign Up](screenshot/signup.png) | ![Login](screenshot/login.png) |
 
-| Register | Home | Alamat Pengiriman |
-| :---: | :---: | :---: |
-| ![Register](screenshots/register.png) | ![Home](screenshots/home.png) | ![Alamat](screenshots/alamat.png) |
+|               Register               |             Home             |        Alamat Pengiriman         |
+|:------------------------------------:|:----------------------------:|:--------------------------------:|
+| ![Register](screenshot/register.png) | ![Home](screenshot/home.png) | ![Alamat](screenshot/alamat.png) |
 
-| Profile | Edit Alamat | Konfirmasi Pesanan |
-| :---: | :---: | :---: |
-| ![Profile](screenshots/profil.png) | ![Edit Alamat](screenshots/editAlamat.png) | ![Konfirmasi](screenshots/konfirmasi.png) |
+|              Profile              |                Edit Alamat                |            Konfirmasi Pesanan            |
+|:---------------------------------:|:-----------------------------------------:|:----------------------------------------:|
+| ![Profile](screenshot/profil.png) | ![Edit Alamat](screenshot/editAlamat.png) | ![Konfirmasi](screenshot/konfirmasi.png) |
