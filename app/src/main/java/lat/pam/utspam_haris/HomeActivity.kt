@@ -1,0 +1,100 @@
+package lat.pam.utspam_haris
+
+import android.content.Intent
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.widget.Button
+import android.widget.EditText
+import android.widget.ImageView
+import android.widget.LinearLayout
+import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.widget.doAfterTextChanged
+
+class HomeActivity : AppCompatActivity() {
+    private lateinit var menuContainer: LinearLayout
+    private lateinit var orderButton: Button
+
+    private val menuItems = listOf(
+        MenuItemData("Kopi Susu Gula Aren", "Espresso, susu creamy, gula aren", "Rp22.000", "Kopi", R.drawable.menu_kopi_susu, "Best seller"),
+        MenuItemData("Donat Coklat", "Donat lembut dengan glaze coklat", "Rp12.000", "Cemilan", R.drawable.menu_donat),
+        MenuItemData("Es Coklat", "Coklat premium, susu, dan es", "Rp18.000", "Non-kopi", R.drawable.menu_es_coklat),
+        MenuItemData("Croissant Keju", "Pastry renyah dengan isian keju", "Rp20.000", "Cemilan", R.drawable.menu_croissant),
+        MenuItemData("Cappuccino", "Espresso dengan foam susu lembut", "Rp25.000", "Kopi", R.drawable.menu_cappuccino),
+        MenuItemData("Matcha Latte", "Matcha Jepang dan susu segar", "Rp23.000", "Non-kopi", R.drawable.menu_matcha)
+    )
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_home)
+
+        menuContainer = findViewById(R.id.menuContainer)
+        orderButton = findViewById(R.id.btnOrder)
+        setupNavigation()
+        updateOrderButton()
+        renderMenu("Semua")
+    }
+
+    private fun setupNavigation() {
+        findViewById<TextView>(R.id.btnProfileTop).setOnClickListener { openProfile() }
+        findViewById<TextView>(R.id.btnProfileBottom).setOnClickListener { openProfile() }
+        findViewById<TextView>(R.id.btnOrderBottom).setOnClickListener { openAddress() }
+        findViewById<TextView>(R.id.btnCoffeeCategory).setOnClickListener { renderMenu("Kopi") }
+        findViewById<TextView>(R.id.filterAll).setOnClickListener { renderMenu("Semua") }
+        findViewById<TextView>(R.id.filterCoffee).setOnClickListener { renderMenu("Kopi") }
+        findViewById<TextView>(R.id.filterNonCoffee).setOnClickListener { renderMenu("Non-kopi") }
+        findViewById<TextView>(R.id.filterSnack).setOnClickListener { renderMenu("Cemilan") }
+        findViewById<EditText>(R.id.inputSearch).doAfterTextChanged { text ->
+            renderMenu(category = "Semua", query = text?.toString().orEmpty())
+        }
+        orderButton.setOnClickListener { openAddress() }
+    }
+
+    private fun renderMenu(category: String, query: String = "") {
+        menuContainer.removeAllViews()
+        menuItems
+            .filter { item ->
+                val matchesCategory = category == "Semua" || item.category == category
+                val matchesQuery = item.name.contains(query, ignoreCase = true)
+                matchesCategory && matchesQuery
+            }
+            .forEach { item -> addMenuItem(item) }
+    }
+
+    private fun addMenuItem(item: MenuItemData) {
+        val itemView = LayoutInflater.from(this)
+            .inflate(R.layout.item_menu, menuContainer, false)
+
+        itemView.findViewById<ImageView>(R.id.menuImage).setImageResource(item.imageRes)
+        itemView.findViewById<TextView>(R.id.menuTag).apply {
+            text = item.tag
+            visibility = if (item.tag.isEmpty()) View.GONE else View.VISIBLE
+        }
+        itemView.findViewById<TextView>(R.id.menuName).text = item.name
+        itemView.findViewById<TextView>(R.id.menuDescription).text = item.description
+        itemView.findViewById<TextView>(R.id.menuPrice).text = item.price
+        itemView.findViewById<TextView>(R.id.btnAddMenu).setOnClickListener { addToCart() }
+        menuContainer.addView(itemView)
+    }
+
+    private fun addToCart() {
+        AppStorage.setCartCount(this, AppStorage.getCartCount(this) + 1)
+        updateOrderButton()
+    }
+
+    private fun updateOrderButton() {
+        val cartCount = AppStorage.getCartCount(this)
+        orderButton.visibility = if (cartCount > 0) View.VISIBLE else View.GONE
+        orderButton.text = "Pesan sekarang ($cartCount)"
+    }
+
+    private fun openProfile() {
+        startActivity(Intent(this, ProfileActivity::class.java))
+    }
+
+    private fun openAddress() {
+        startActivity(Intent(this, AddressActivity::class.java).putExtra(AddressActivity.FROM_ORDER, true))
+    }
+}
+

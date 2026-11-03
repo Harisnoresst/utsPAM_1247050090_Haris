@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="cream">#F7F4EE</color>
+    <color name="paper">#FFFDF8</color>
+    <color name="charcoal">#2F2D29</color>
+    <color name="brown">#9A6A42</color>
+    <color name="light_brown">#E1B889</color>
+    <color name="muted">#8B847B</color>
+    <color name="line">#E0D8CD</color>
+    <color name="success">#BDEACB</color>
+    <color name="success_text">#32744B</color>
+</resources>
