@@ -6,18 +6,54 @@
     android:orientation="vertical"
     android:padding="28dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="☕  Kopi dan Nyemil"
-        android:textColor="@android:color/white"
-        android:textSize="18sp"
-        android:textStyle="bold" />
-
+    <!-- Header Brand -->
     <LinearLayout
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imgCoffeeIcon"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:contentDescription="Coffee icon"
+            android:scaleType="fitCenter"
+            android:src="@drawable/bg_logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Kopi dan Nyemil"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!-- Container Tengah untuk Logo (Mengisi ruang tengah) -->
+    <FrameLayout
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="1">
+
+        <!-- Logo Aplikasi (Diperbesar & Center di Tengah) -->
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:contentDescription="Logo Kopi dan Nyemil"
+            android:scaleType="fitCenter"
+            android:src="@drawable/bg_logo" />
+
+    </FrameLayout>
+
+    <!-- Section Bawah -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:gravity="bottom"
         android:orientation="vertical"
         android:paddingBottom="24dp">
@@ -58,6 +94,7 @@
             android:text="@string/start_now"
             android:textAllCaps="false"
             android:textColor="@android:color/white" />
+
     </LinearLayout>
 
     <TextView
@@ -66,4 +103,5 @@
         android:text="@string/welcome_progress"
         android:textColor="#B5B0A7"
         android:textSize="11sp" />
+
 </LinearLayout>

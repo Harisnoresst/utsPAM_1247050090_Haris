@@ -16,7 +16,7 @@
             android:layout_height="40dp"
             android:gravity="center_vertical"
             android:text="‹  @string/back"
-            android:textColor="@color/muted"
+            android:textColor="@color/charcoal"
             android:textSize="13sp" />
 
         <TextView
@@ -25,7 +25,7 @@
             android:layout_marginTop="28dp"
             android:letterSpacing="0.12"
             android:text="@string/last_step"
-            android:textColor="@color/brown"
+            android:textColor="@color/charcoal"
             android:textSize="10sp"
             android:textStyle="bold" />
 
@@ -44,7 +44,7 @@
             android:layout_marginTop="12dp"
             android:lineSpacingExtra="5dp"
             android:text="@string/address_description"
-            android:textColor="@color/muted"
+            android:textColor="@color/charcoal"
             android:textSize="14sp" />
 
         <LinearLayout
@@ -59,7 +59,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="⌖"
-                android:textColor="@color/brown"
+                android:textColor="@color/charcoal"
                 android:textSize="24sp" />
 
             <LinearLayout
@@ -82,7 +82,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:text="@string/safe_delivery"
-                    android:textColor="@color/muted"
+                    android:textColor="@color/charcoal"
                     android:textSize="11sp" />
             </LinearLayout>
 

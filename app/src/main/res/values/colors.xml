@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="cream">#F7F4EE</color>
-    <color name="paper">#FFFDF8</color>
-    <color name="charcoal">#2F2D29</color>
-    <color name="brown">#9A6A42</color>
-    <color name="light_brown">#E1B889</color>
-    <color name="muted">#8B847B</color>
-    <color name="line">#E0D8CD</color>
+    <color name="cream">#FFFFFF</color>
+    <color name="paper">#FFFFFF</color>
+    <color name="charcoal">#1E3932</color>
+    <color name="brown">#00704A</color>
+    <color name="light_brown">#A8D5BA</color>
+    <color name="muted">#5E6F68</color>
+    <color name="line">#DCE7E0</color>
     <color name="success">#BDEACB</color>
     <color name="success_text">#32744B</color>
+    <color name="mint">#E4F2EA</color>
 </resources>

@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:letterSpacing="0.12"
             android:text="@string/register_label"
-            android:textColor="@color/brown"
+            android:textColor="@color/charcoal"
             android:textSize="10sp"
             android:textStyle="bold" />
 
@@ -40,7 +40,7 @@
             android:layout_marginTop="14dp"
             android:lineSpacingExtra="5dp"
             android:text="@string/register_description"
-            android:textColor="@color/muted"
+            android:textColor="@color/charcoal"
             android:textSize="14sp" />
 
         <EditText
@@ -90,7 +90,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="18dp"
             android:text="@string/has_account"
-            android:textColor="@color/brown"
+            android:textColor="@color/charcoal"
             android:textSize="12sp" />
     </LinearLayout>
 </LinearLayout>

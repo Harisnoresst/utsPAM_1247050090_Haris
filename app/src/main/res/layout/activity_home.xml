@@ -32,8 +32,9 @@
             android:layout_height="wrap_content"
             android:padding="10dp"
             android:text="Profil"
-            android:textColor="@color/muted"
-            android:textSize="12sp" />
+            android:textColor="@color/charcoal"
+            android:textSize="12sp"
+            android:textStyle="bold" />
     </LinearLayout>
 
     <ScrollView
@@ -67,7 +68,7 @@
                         android:layout_height="wrap_content"
                         android:letterSpacing="0.1"
                         android:text="@string/home_date"
-                        android:textColor="@color/brown"
+                        android:textColor="@color/charcoal"
                         android:textSize="10sp"
                         android:textStyle="bold" />
 
@@ -85,7 +86,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:text="@string/home_question"
-                        android:textColor="@color/muted"
+                        android:textColor="@color/charcoal"
                         android:textSize="13sp" />
                 </LinearLayout>
 
@@ -94,8 +95,8 @@
                     android:layout_height="45dp"
                     android:background="@drawable/bg_avatar"
                     android:gravity="center"
-                    android:text="R"
-                    android:textColor="@color/charcoal"
+                    android:text="H"
+                    android:textColor="@android:color/white"
                     android:textSize="19sp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -114,7 +115,7 @@
                     android:layout_height="wrap_content"
                     android:letterSpacing="0.12"
                     android:text="@string/special_for_you"
-                    android:textColor="@color/light_brown"
+                    android:textColor="@color/charcoal"
                     android:textSize="10sp"
                     android:textStyle="bold" />
 
@@ -123,7 +124,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:text="@string/promo_title"
-                    android:textColor="@android:color/white"
+                    android:textColor="@color/charcoal"
                     android:textSize="27sp"
                     android:textStyle="bold" />
 
@@ -132,7 +133,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:text="@string/promo_description"
-                    android:textColor="#BEB9AE"
+                    android:textColor="@color/charcoal"
                     android:textSize="12sp" />
 
                 <TextView
@@ -141,7 +142,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
                     android:text="@string/coffee_menu"
-                    android:textColor="@color/light_brown"
+                    android:textColor="@color/charcoal"
                     android:textSize="12sp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -159,7 +160,7 @@
                     android:layout_height="wrap_content"
                     android:letterSpacing="0.12"
                     android:text="@string/today_menu"
-                    android:textColor="@color/brown"
+                    android:textColor="@color/charcoal"
                     android:textSize="10sp"
                     android:textStyle="bold" />
 
@@ -197,7 +198,12 @@
                             android:id="@+id/filterAll"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:padding="10dp"
+                            android:layout_marginEnd="8dp"
+                            android:background="@drawable/bg_chip_active"
+                            android:paddingStart="16dp"
+                            android:paddingTop="8dp"
+                            android:paddingEnd="16dp"
+                            android:paddingBottom="8dp"
                             android:text="@string/all"
                             android:textColor="@color/charcoal"
                             android:textStyle="bold" />
@@ -206,25 +212,39 @@
                             android:id="@+id/filterCoffee"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:padding="10dp"
+                            android:layout_marginEnd="8dp"
+                            android:background="@drawable/bg_chip"
+                            android:paddingStart="16dp"
+                            android:paddingTop="8dp"
+                            android:paddingEnd="16dp"
+                            android:paddingBottom="8dp"
                             android:text="@string/coffee"
-                            android:textColor="@color/muted" />
+                            android:textColor="@color/charcoal" />
 
                         <TextView
                             android:id="@+id/filterNonCoffee"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:padding="10dp"
+                            android:layout_marginEnd="8dp"
+                            android:background="@drawable/bg_chip"
+                            android:paddingStart="16dp"
+                            android:paddingTop="8dp"
+                            android:paddingEnd="16dp"
+                            android:paddingBottom="8dp"
                             android:text="@string/non_coffee"
-                            android:textColor="@color/muted" />
+                            android:textColor="@color/charcoal" />
 
                         <TextView
                             android:id="@+id/filterSnack"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:padding="10dp"
+                            android:background="@drawable/bg_chip"
+                            android:paddingStart="16dp"
+                            android:paddingTop="8dp"
+                            android:paddingEnd="16dp"
+                            android:paddingBottom="8dp"
                             android:text="@string/snack"
-                            android:textColor="@color/muted" />
+                            android:textColor="@color/charcoal" />
                     </LinearLayout>
                 </HorizontalScrollView>
             </LinearLayout>
@@ -262,7 +282,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="⌂\nBeranda"
-            android:textColor="@color/brown"
+            android:textColor="@color/charcoal"
             android:textSize="11sp" />
 
         <TextView
@@ -272,7 +292,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="▢\nPesanan"
-            android:textColor="@color/muted"
+            android:textColor="@color/charcoal"
             android:textSize="11sp" />
 
         <TextView
@@ -282,7 +302,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="♙\nProfil"
-            android:textColor="@color/muted"
+            android:textColor="@color/charcoal"
             android:textSize="11sp" />
     </LinearLayout>
 </LinearLayout>

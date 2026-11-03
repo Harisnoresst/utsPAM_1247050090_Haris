@@ -17,11 +17,11 @@ class HomeActivity : AppCompatActivity() {
     private lateinit var orderButton: Button
 
     private val menuItems = listOf(
-        MenuItemData("Kopi Susu Gula Aren", "Espresso, susu creamy, gula aren", "Rp22.000", "Kopi", R.drawable.menu_kopi_susu, "Best seller"),
-        MenuItemData("Donat Coklat", "Donat lembut dengan glaze coklat", "Rp12.000", "Cemilan", R.drawable.menu_donat),
-        MenuItemData("Es Coklat", "Coklat premium, susu, dan es", "Rp18.000", "Non-kopi", R.drawable.menu_es_coklat),
-        MenuItemData("Croissant Keju", "Pastry renyah dengan isian keju", "Rp20.000", "Cemilan", R.drawable.menu_croissant),
-        MenuItemData("Cappuccino", "Espresso dengan foam susu lembut", "Rp25.000", "Kopi", R.drawable.menu_cappuccino),
+        MenuItemData("Cappucino", "Espresso dengan foam susu lembut", "Rp22.000", "Kopi", R.drawable.menu_cappucino, "Best seller"),
+        MenuItemData("Donat Coklat", "Donat lembut dengan glaze coklat", "Rp12.000", "Cemilan", R.drawable.menu_donut),
+        MenuItemData("Ice Choco", "Coklat premium, susu, dan es", "Rp18.000", "Non-kopi", R.drawable.menu_choco),
+        MenuItemData("Croissant Almond", "Pastry renyah dengan topping almond", "Rp20.000", "Cemilan", R.drawable.menu_croissant),
+        MenuItemData("Coffe V60", "Biji kopi arabica dengan teknik v60", "Rp25.000", "Kopi", R.drawable.menu_v60),
         MenuItemData("Matcha Latte", "Matcha Jepang dan susu segar", "Rp23.000", "Non-kopi", R.drawable.menu_matcha)
     )
 

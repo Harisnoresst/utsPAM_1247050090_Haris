@@ -63,7 +63,7 @@
                         android:layout_height="wrap_content"
                         android:letterSpacing="0.12"
                         android:text="@string/profile_label"
-                        android:textColor="@color/brown"
+                        android:textColor="@color/charcoal"
                         android:textSize="10sp"
                         android:textStyle="bold" />
 
@@ -82,8 +82,8 @@
                     android:layout_height="52dp"
                     android:background="@drawable/bg_avatar"
                     android:gravity="center"
-                    android:text="R"
-                    android:textColor="@color/charcoal"
+                    android:text="H"
+                    android:textColor="@android:color/white"
                     android:textSize="22sp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -101,8 +101,8 @@
                     android:layout_height="48dp"
                     android:background="@drawable/bg_avatar"
                     android:gravity="center"
-                    android:text="R"
-                    android:textColor="@color/charcoal"
+                    android:text="H"
+                    android:textColor="@android:color/white"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
@@ -116,8 +116,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Raka Pratama"
-                        android:textColor="@android:color/white"
+                        android:text="Muhammad Haris Nur Fadillah"
+                        android:textColor="@color/charcoal"
                         android:textSize="15sp"
                         android:textStyle="bold" />
 
@@ -125,8 +125,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="raka@email.com"
-                        android:textColor="#BAB3A8"
+                        android:text="haris@email.com"
+                        android:textColor="@color/charcoal"
                         android:textSize="11sp" />
                 </LinearLayout>
 
@@ -134,7 +134,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Edit"
-                    android:textColor="@color/light_brown"
+                    android:textColor="@color/charcoal"
                     android:textSize="11sp" />
             </LinearLayout>
 
@@ -144,7 +144,7 @@
                 android:layout_marginTop="30dp"
                 android:letterSpacing="0.12"
                 android:text="@string/settings"
-                android:textColor="@color/brown"
+                android:textColor="@color/charcoal"
                 android:textSize="10sp"
                 android:textStyle="bold" />
 
@@ -204,7 +204,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="♙\nProfil"
-            android:textColor="@color/brown"
+            android:textColor="@color/charcoal"
             android:textSize="11sp" />
     </LinearLayout>
 </LinearLayout>

@@ -6,7 +6,7 @@
     <string name="welcome_description">Racikan kopi hangat dan camilan favorit, dibuat dengan hati untuk menemani setiap cerita.</string>
     <string name="start_now">Mulai sekarang</string>
     <string name="back">Kembali</string>
-    <string name="welcome_label">EST. 2024 · EVERYDAY COMFORT</string>
+    <string name="welcome_label">EST. 2026 · EVERYDAY COMFORT</string>
     <string name="welcome_progress">01                         02</string>
     <string name="signup_label">SELAMAT DATANG</string>
     <string name="signup_title">Buat pengalamanmu lebih personal.</string>
@@ -30,7 +30,7 @@
     <string name="forgot_password">Lupa kata sandi?</string>
     <string name="no_account">Belum punya akun? Daftar sekarang</string>
     <string name="has_account">Sudah punya akun? Masuk di sini</string>
-    <string name="home_date">SELASA, 24 DESEMBER 2024</string>
+    <string name="home_date">Selasa, 3 September 2026</string>
     <string name="hello_haris">Halo, Haris.</string>
     <string name="home_question">Apa yang ingin kamu nikmati hari ini?</string>
     <string name="special_for_you">SPECIAL FOR YOU</string>
@@ -60,9 +60,9 @@
     <string name="safe_delivery">Pengiriman cepat &amp; aman</string>
     <string name="recipient">Nama penerima</string>
     <string name="address">Alamat lengkap</string>
-    <string name="address_hint">Jl. Melati No. 12, Sukajadi</string>
+    <string name="address_hint">Jl. Soekarno Hatta Bandung</string>
     <string name="address_detail">Patokan / detail lainnya</string>
-    <string name="detail_hint">Rumah dengan pagar putih</string>
+    <string name="detail_hint">Rumah kampus UIN 1</string>
     <string name="order_send">Order dan kirim</string>
     <string name="save_address">Simpan alamat</string>
     <string name="order_received">PESANAN DITERIMA</string>

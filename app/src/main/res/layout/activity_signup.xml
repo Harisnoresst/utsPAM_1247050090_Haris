@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:letterSpacing="0.12"
             android:text="@string/signup_label"
-            android:textColor="@color/brown"
+            android:textColor="@color/charcoal"
             android:textSize="10sp"
             android:textStyle="bold" />
 
@@ -40,7 +40,7 @@
             android:layout_marginTop="14dp"
             android:lineSpacingExtra="5dp"
             android:text="@string/signup_description"
-            android:textColor="@color/muted"
+            android:textColor="@color/charcoal"
             android:textSize="14sp" />
 
         <Button
@@ -68,7 +68,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="22dp"
             android:text="✓  Tanpa biaya tambahan  ·  Data aman"
-            android:textColor="@color/muted"
+            android:textColor="@color/charcoal"
             android:textSize="11sp" />
     </LinearLayout>
 
@@ -76,6 +76,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Secangkir nyaman, kapan saja."
-        android:textColor="#B2ACA2"
+        android:textColor="@color/charcoal"
         android:textSize="11sp" />
 </LinearLayout>

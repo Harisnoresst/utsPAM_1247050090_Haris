@@ -13,12 +13,32 @@
         android:textColor="@color/muted"
         android:textSize="13sp" />
 
-    <TextView
+    <!-- Container Logo & Judul -->
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="18dp"
-        android:text="☕  Kopi dan Nyemil"
-        android:textColor="@color/charcoal"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <!-- Logo ImageView menggantikan emotikon kopi -->
+        <ImageView
+            android:id="@+id/imgCoffeeIcon"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:contentDescription="Logo Kopi dan Nyemil"
+            android:scaleType="fitCenter"
+            android:src="@drawable/bg_logo2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Kopi dan Nyemil"
+            android:textColor="@color/charcoal"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
 </LinearLayout>

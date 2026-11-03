@@ -7,16 +7,24 @@
     android:paddingTop="16dp"
     android:paddingBottom="16dp">
 
-    <TextView
-        android:id="@+id/settingIcon"
+    <!-- Icon Lingkaran Hijau -->
+    <FrameLayout
         android:layout_width="36dp"
         android:layout_height="36dp"
         android:background="@drawable/bg_avatar"
-        android:gravity="center"
-        android:text="⌖"
-        android:textColor="@color/brown"
-        android:textSize="18sp" />
+        android:padding="9dp">
 
+        <ImageView
+            android:id="@+id/settingIcon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_user"
+            android:contentDescription="Setting icon" />
+
+    </FrameLayout>
+
+    <!-- Informasi Setting -->
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -39,12 +47,15 @@
             android:layout_marginTop="4dp"
             android:textColor="@color/muted"
             android:textSize="11sp" />
+
     </LinearLayout>
 
+    <!-- Arrow -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="›"
         android:textColor="@color/muted"
         android:textSize="20sp" />
+
 </LinearLayout>
