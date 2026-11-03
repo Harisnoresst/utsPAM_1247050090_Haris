@@ -14,7 +14,7 @@
     <string name="create_account">Buat akun baru</string>
     <string name="existing_account">Saya sudah punya akun</string>
     <string name="login_label">KEMBALI LAGI</string>
-    <string name="login_title">Halo, teman.</string>
+    <string name="login_title">Halo, Sobat Kopi</string>
     <string name="login_description">Masuk untuk melanjutkan pesanan dan menemukan favoritmu.</string>
     <string name="register_label">LANGKAH PERTAMA</string>
     <string name="register_title">Mulai dari secangkir bahagia.</string>
@@ -31,7 +31,7 @@
     <string name="no_account">Belum punya akun? Daftar sekarang</string>
     <string name="has_account">Sudah punya akun? Masuk di sini</string>
     <string name="home_date">Selasa, 3 September 2026</string>
-    <string name="hello_haris">Halo, Haris.</string>
+    <string name="hello_haris">Halo, Haris</string>
     <string name="home_question">Apa yang ingin kamu nikmati hari ini?</string>
     <string name="special_for_you">SPECIAL FOR YOU</string>
     <string name="promo_title">Teman ngopi paling pas.</string>

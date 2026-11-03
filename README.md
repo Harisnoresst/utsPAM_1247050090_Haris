@@ -29,10 +29,16 @@ Kopi dan Nyemil adalah aplikasi mobile berbasis Android untuk pemesanan makanan 
 ## Screenshot Tampilan
 *(Tambahkan gambar screenshot aplikasi Anda ke dalam folder repo, lalu panggil dengan format di bawah ini)*
 
-| Splash & Welcome | Login & Register | Home Menu |
-| :---: | :---: | :---: |
-| ![Splash](link-gambar-splash.png) | ![Login](link-gambar-login.png) | ![Home](link-gambar-home.png) |
+## Screenshot Tampilan
 
-| Profile | Alamat Pengiriman | Konfirmasi |
+| Splash & Welcome | Sign Up | Login |
 | :---: | :---: | :---: |
-| ![Profile](link-gambar-profile.png) | ![Alamat](link-gambar-alamat.png) | ![Konfirmasi](link-gambar-konfirmasi.png) |
+| ![Splash](screenshots/welcome.png) | ![Sign Up](screenshots/signup.png) | ![Login](screenshots/login.png) |
+
+| Register | Home | Alamat Pengiriman |
+| :---: | :---: | :---: |
+| ![Register](screenshots/register.png) | ![Home](screenshots/home.png) | ![Alamat](screenshots/alamat.png) |
+
+| Profile | Edit Alamat | Konfirmasi Pesanan |
+| :---: | :---: | :---: |
+| ![Profile](screenshots/profil.png) | ![Edit Alamat](screenshots/editAlamat.png) | ![Konfirmasi](screenshots/konfirmasi.png) |
