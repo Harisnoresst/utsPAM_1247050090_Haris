@@ -20,7 +20,7 @@ Kopi dan Nyemil adalah aplikasi mobile berbasis Android untuk pemesanan makanan 
 
 ## Cara Menjalankan Aplikasi
 1. Clone repositori ini ke komputer lokal Anda:
-   `git clone https://github.com/Harisnoresst/utsPAM_1247050090_Haris.git
+   `git clone` https://github.com/Harisnoresst/utsPAM_1247050090_Haris.git
 2. Buka proyek tersebut menggunakan **Android Studio**.
 3. Tunggu hingga proses *Gradle Sync* selesai.
 4. Sambungkan perangkat Android (fisik) atau jalankan Emulator.
