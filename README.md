@@ -167,16 +167,6 @@ APK hasil build ada di `app/build/outputs/apk/debug/`.
 
 ---
 
-### Ide pengembangan
-
-- Autentikasi sungguhan (Firebase Auth atau REST API) dan validasi form
-- Keranjang lengkap dengan jumlah per item dan total harga
-- Menu dari database (Room) atau API
-- Riwayat pesanan pada tab "Pesanan"
-- Migrasi ke Jetpack Compose atau View Binding
-
----
-
 ## developer
 
 **Muhammad Haris Nur Fadillah 1247050090**
