@@ -11,7 +11,9 @@
         <activity android:name=".RegisterActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".SignupActivity" />
-        <activity android:name=".WelcomeActivity" />
+        <activity
+            android:name=".WelcomeActivity"
+            android:theme="@style/Theme.KopiDanNyemil.Welcome" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

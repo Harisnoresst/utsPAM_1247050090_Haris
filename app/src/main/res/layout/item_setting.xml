@@ -2,29 +2,31 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/bg_card"
+    android:clipToOutline="true"
+    android:foreground="?attr/selectableItemBackground"
     android:gravity="center_vertical"
     android:orientation="horizontal"
-    android:paddingTop="16dp"
-    android:paddingBottom="16dp">
+    android:padding="14dp">
 
-    <!-- Icon Lingkaran Hijau -->
+    <!-- Ikon -->
     <FrameLayout
-        android:layout_width="36dp"
-        android:layout_height="36dp"
-        android:background="@drawable/bg_avatar"
-        android:padding="9dp">
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:background="@drawable/bg_icon_tile"
+        android:padding="11dp">
 
         <ImageView
             android:id="@+id/settingIcon"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:contentDescription="Setting icon"
             android:scaleType="fitCenter"
-            android:src="@drawable/ic_user"
-            android:contentDescription="Setting icon" />
-
+            android:src="@drawable/ic_user" />
     </FrameLayout>
 
-    <!-- Informasi Setting -->
+    <!-- Informasi setting -->
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -37,25 +39,26 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/charcoal"
-            android:textSize="13sp"
+            android:textSize="14sp"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/settingSubtitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="3dp"
+            android:ellipsize="end"
+            android:maxLines="1"
             android:textColor="@color/muted"
-            android:textSize="11sp" />
-
+            android:textSize="12sp" />
     </LinearLayout>
 
-    <!-- Arrow -->
+    <!-- Panah -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:text="›"
-        android:textColor="@color/muted"
-        android:textSize="20sp" />
-
+        android:textColor="@color/hint"
+        android:textSize="24sp" />
 </LinearLayout>

@@ -3,55 +3,56 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/paper"
+    android:fitsSystemWindows="true"
     android:gravity="center"
     android:orientation="vertical"
-    android:padding="30dp">
+    android:padding="28dp">
 
-    <TextView
-        android:layout_width="84dp"
-        android:layout_height="84dp"
+    <!-- Lencana sukses -->
+    <FrameLayout
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:background="@drawable/bg_success"
-        android:gravity="center"
-        android:text="✓"
-        android:textColor="@color/success_text"
-        android:textSize="42sp"
-        android:textStyle="bold" />
+        android:padding="40dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/order_received"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_check" />
+    </FrameLayout>
 
     <TextView
+        style="@style/App.Text.Pill"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:letterSpacing="0.12"
-        android:text="@string/order_received"
-        android:textColor="@color/charcoal"
-        android:textSize="10sp"
-        android:textStyle="bold" />
+        android:layout_marginTop="28dp"
+        android:text="@string/order_received" />
 
     <TextView
+        style="@style/App.Text.Title"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="@string/thank_you" />
+
+    <TextView
+        style="@style/App.Text.Body"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:gravity="center"
-        android:text="@string/thank_you"
-        android:textColor="@color/charcoal"
-        android:textSize="42sp"
-        android:textStyle="bold" />
+        android:text="@string/confirmation_description" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
-        android:gravity="center"
-        android:lineSpacingExtra="6dp"
-        android:text="@string/confirmation_description"
-        android:textColor="@color/charcoal"
-        android:textSize="13sp" />
-
+    <!-- Info pesanan -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="22dp"
-        android:gravity="center"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/bg_card"
+        android:orientation="horizontal"
         android:paddingTop="18dp"
         android:paddingBottom="18dp"
         android:weightSum="2">
@@ -67,8 +68,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/order_number"
-                android:textColor="@color/charcoal"
-                android:textSize="10sp" />
+                android:textColor="@color/muted"
+                android:textSize="12sp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -76,9 +77,14 @@
                 android:layout_marginTop="4dp"
                 android:text="@string/order_number_value"
                 android:textColor="@color/charcoal"
-                android:textSize="13sp"
+                android:textSize="15sp"
                 android:textStyle="bold" />
         </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/line" />
 
         <LinearLayout
             android:layout_width="0dp"
@@ -91,35 +97,33 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/arrival"
-                android:textColor="@color/charcoal"
-                android:textSize="10sp" />
+                android:textColor="@color/muted"
+                android:textSize="12sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:text="@string/arrival_value"
-                android:textColor="@color/charcoal"
-                android:textSize="13sp"
+                android:textColor="@color/brown"
+                android:textSize="15sp"
                 android:textStyle="bold" />
         </LinearLayout>
     </LinearLayout>
 
     <Button
         android:id="@+id/btnBackHome"
+        style="@style/App.Button.Primary"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/bg_button_primary"
-        android:text="@string/back_home"
-        android:textAllCaps="false"
-        android:textColor="@android:color/white" />
+        android:layout_height="56dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/back_home" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="22dp"
         android:text="Dibuat segar, khusus untukmu"
-        android:textColor="@color/charcoal"
-        android:textSize="11sp" />
+        android:textColor="@color/hint"
+        android:textSize="12sp" />
 </LinearLayout>

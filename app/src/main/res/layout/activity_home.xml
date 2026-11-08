@@ -2,9 +2,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/cream"
+    android:background="@color/surface"
+    android:fitsSystemWindows="true"
     android:orientation="vertical">
 
+    <!-- Top bar -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="64dp"
@@ -21,8 +23,8 @@
 
             <ImageView
                 android:id="@+id/imgCoffeeIcon"
-                android:layout_width="28dp"
-                android:layout_height="28dp"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
                 android:contentDescription="Logo Kopi dan Nyemil"
                 android:scaleType="fitCenter"
                 android:src="@drawable/bg_logo2" />
@@ -30,12 +32,11 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
+                android:layout_marginStart="10dp"
                 android:text="Kopi dan Nyemil"
                 android:textColor="@color/charcoal"
                 android:textSize="17sp"
                 android:textStyle="bold" />
-
         </LinearLayout>
 
         <Space
@@ -47,7 +48,15 @@
             android:id="@+id/btnProfileTop"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="10dp"
+            android:background="@drawable/bg_chip"
+            android:drawableStart="@drawable/ic_person"
+            android:drawablePadding="6dp"
+            android:drawableTint="@color/brown"
+            android:gravity="center_vertical"
+            android:paddingStart="12dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="14dp"
+            android:paddingBottom="8dp"
             android:text="Profil"
             android:textColor="@color/charcoal"
             android:textSize="12sp"
@@ -57,22 +66,25 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:scrollbars="none">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingBottom="20dp">
+            android:paddingBottom="16dp">
 
+            <!-- Sapaan -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center_vertical"
                 android:orientation="horizontal"
                 android:paddingStart="20dp"
-                android:paddingTop="24dp"
+                android:paddingTop="16dp"
                 android:paddingEnd="20dp"
-                android:paddingBottom="28dp">
+                android:paddingBottom="22dp">
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -83,127 +95,135 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:letterSpacing="0.1"
                         android:text="@string/home_date"
-                        android:textColor="@color/charcoal"
-                        android:textSize="10sp"
+                        android:textColor="@color/muted"
+                        android:textSize="12sp"
                         android:textStyle="bold" />
 
                     <TextView
+                        style="@style/App.Text.Title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="7dp"
+                        android:layout_marginTop="6dp"
                         android:text="@string/hello_haris"
-                        android:textColor="@color/charcoal"
-                        android:textSize="34sp"
-                        android:textStyle="bold" />
+                        android:textSize="30sp" />
 
                     <TextView
+                        style="@style/App.Text.Body"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="4dp"
                         android:text="@string/home_question"
-                        android:textColor="@color/charcoal"
                         android:textSize="13sp" />
                 </LinearLayout>
 
                 <TextView
-                    android:layout_width="45dp"
-                    android:layout_height="45dp"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="12dp"
                     android:background="@drawable/bg_avatar"
                     android:gravity="center"
                     android:text="H"
                     android:textColor="@android:color/white"
-                    android:textSize="19sp"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
             </LinearLayout>
 
+            <!-- Kartu promo -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
-                android:background="@drawable/bg_promo"
+                android:background="@drawable/bg_promo_solid"
                 android:orientation="vertical"
                 android:padding="24dp">
 
                 <TextView
+                    style="@style/App.Text.Pill"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:letterSpacing="0.12"
+                    android:background="@drawable/bg_pill_dark"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
                     android:text="@string/special_for_you"
-                    android:textColor="@color/charcoal"
-                    android:textSize="10sp"
-                    android:textStyle="bold" />
+                    android:textColor="@color/light_brown"
+                    android:textSize="10sp" />
 
                 <TextView
+                    style="@style/App.Text.Title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="14dp"
+                    android:maxWidth="230dp"
                     android:text="@string/promo_title"
-                    android:textColor="@color/charcoal"
-                    android:textSize="27sp"
-                    android:textStyle="bold" />
+                    android:textColor="@android:color/white"
+                    android:textSize="26sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:text="@string/promo_description"
-                    android:textColor="@color/charcoal"
-                    android:textSize="12sp" />
+                    android:textColor="@color/on_dark_muted"
+                    android:textSize="13sp" />
 
                 <TextView
                     android:id="@+id/btnCoffeeCategory"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="18dp"
+                    android:background="@drawable/bg_cta_pill"
+                    android:paddingStart="18dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="18dp"
+                    android:paddingBottom="10dp"
                     android:text="@string/coffee_menu"
                     android:textColor="@color/charcoal"
-                    android:textSize="12sp"
+                    android:textSize="13sp"
                     android:textStyle="bold" />
             </LinearLayout>
 
+            <!-- Pencarian & filter -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="34dp"
+                android:layout_marginTop="30dp"
                 android:orientation="vertical"
                 android:paddingStart="20dp"
                 android:paddingEnd="20dp">
 
                 <TextView
+                    style="@style/App.Text.Label"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:letterSpacing="0.12"
-                    android:text="@string/today_menu"
-                    android:textColor="@color/charcoal"
-                    android:textSize="10sp"
-                    android:textStyle="bold" />
+                    android:text="@string/today_menu" />
 
                 <TextView
+                    style="@style/App.Text.Title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="7dp"
+                    android:layout_marginTop="6dp"
                     android:text="@string/find_favorite"
-                    android:textColor="@color/charcoal"
-                    android:textSize="24sp"
-                    android:textStyle="bold" />
+                    android:textSize="22sp" />
 
                 <EditText
                     android:id="@+id/inputSearch"
+                    style="@style/App.Input"
                     android:layout_width="match_parent"
-                    android:layout_height="48dp"
+                    android:layout_height="52dp"
                     android:layout_marginTop="16dp"
-                    android:background="@drawable/bg_input"
+                    android:background="@drawable/bg_input_white"
+                    android:drawableStart="@drawable/ic_search"
+                    android:drawablePadding="10dp"
+                    android:drawableTint="@color/hint"
                     android:hint="@string/search_hint"
-                    android:padding="14dp"
-                    android:singleLine="true" />
+                    android:inputType="text" />
 
                 <HorizontalScrollView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="13dp"
+                    android:layout_marginTop="14dp"
                     android:scrollbars="none">
 
                     <LinearLayout
@@ -213,55 +233,36 @@
 
                         <TextView
                             android:id="@+id/filterAll"
+                            style="@style/App.Chip"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="8dp"
                             android:background="@drawable/bg_chip_active"
-                            android:paddingStart="16dp"
-                            android:paddingTop="8dp"
-                            android:paddingEnd="16dp"
-                            android:paddingBottom="8dp"
                             android:text="@string/all"
-                            android:textColor="@color/charcoal"
-                            android:textStyle="bold" />
+                            android:textColor="@android:color/white" />
 
                         <TextView
                             android:id="@+id/filterCoffee"
+                            style="@style/App.Chip"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="8dp"
-                            android:background="@drawable/bg_chip"
-                            android:paddingStart="16dp"
-                            android:paddingTop="8dp"
-                            android:paddingEnd="16dp"
-                            android:paddingBottom="8dp"
-                            android:text="@string/coffee"
-                            android:textColor="@color/charcoal" />
+                            android:text="@string/coffee" />
 
                         <TextView
                             android:id="@+id/filterNonCoffee"
+                            style="@style/App.Chip"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="8dp"
-                            android:background="@drawable/bg_chip"
-                            android:paddingStart="16dp"
-                            android:paddingTop="8dp"
-                            android:paddingEnd="16dp"
-                            android:paddingBottom="8dp"
-                            android:text="@string/non_coffee"
-                            android:textColor="@color/charcoal" />
+                            android:text="@string/non_coffee" />
 
                         <TextView
                             android:id="@+id/filterSnack"
+                            style="@style/App.Chip"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/bg_chip"
-                            android:paddingStart="16dp"
-                            android:paddingTop="8dp"
-                            android:paddingEnd="16dp"
-                            android:paddingBottom="8dp"
-                            android:text="@string/snack"
-                            android:textColor="@color/charcoal" />
+                            android:text="@string/snack" />
                     </LinearLayout>
                 </HorizontalScrollView>
             </LinearLayout>
@@ -271,55 +272,66 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:paddingTop="9dp" />
-
-            <Button
-                android:id="@+id/btnOrder"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_margin="20dp"
-                android:background="@drawable/bg_button_primary"
-                android:text="Pesan sekarang"
-                android:textAllCaps="false"
-                android:textColor="@android:color/white"
-                android:visibility="gone" />
+                android:paddingTop="10dp" />
         </LinearLayout>
     </ScrollView>
 
+    <!-- Tombol pesan (melayang di atas navigasi bawah, tampil saat keranjang terisi) -->
+    <Button
+        android:id="@+id/btnOrder"
+        style="@style/App.Button.Primary"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="12dp"
+        android:text="Pesan sekarang"
+        android:visibility="gone" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line" />
+
+    <!-- Navigasi bawah -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="65dp"
+        android:layout_height="68dp"
         android:background="@color/paper"
         android:gravity="center"
         android:weightSum="3">
 
         <TextView
+            style="@style/App.NavItem"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:gravity="center"
-            android:text="⌂\nBeranda"
-            android:textColor="@color/charcoal"
-            android:textSize="11sp" />
+            android:drawableTop="@drawable/ic_home"
+            android:drawableTint="@color/brown"
+            android:text="Beranda"
+            android:textColor="@color/brown" />
 
         <TextView
             android:id="@+id/btnOrderBottom"
+            style="@style/App.NavItem"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:gravity="center"
-            android:text="▢\nPesanan"
-            android:textColor="@color/charcoal"
-            android:textSize="11sp" />
+            android:drawableTop="@drawable/ic_receipt"
+            android:drawableTint="@color/hint"
+            android:text="Pesanan"
+            android:textColor="@color/hint" />
 
         <TextView
             android:id="@+id/btnProfileBottom"
+            style="@style/App.NavItem"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:gravity="center"
-            android:text="♙\nProfil"
-            android:textColor="@color/charcoal"
-            android:textSize="11sp" />
+            android:drawableTop="@drawable/ic_person"
+            android:drawableTint="@color/hint"
+            android:text="Profil"
+            android:textColor="@color/hint" />
     </LinearLayout>
 </LinearLayout>

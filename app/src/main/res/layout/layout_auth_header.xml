@@ -6,26 +6,23 @@
 
     <TextView
         android:id="@+id/btnBack"
+        style="@style/App.Text.Back"
         android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:gravity="center_vertical"
-        android:text="@string/back"
-        android:textColor="@color/muted"
-        android:textSize="13sp" />
+        android:layout_height="44dp"
+        android:text="@string/back" />
 
-    <!-- Container Logo & Judul -->
+    <!-- Logo & nama brand -->
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
+        android:layout_marginTop="14dp"
         android:gravity="center_vertical"
         android:orientation="horizontal">
 
-        <!-- Logo ImageView menggantikan emotikon kopi -->
         <ImageView
             android:id="@+id/imgCoffeeIcon"
-            android:layout_width="28dp"
-            android:layout_height="28dp"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
             android:contentDescription="Logo Kopi dan Nyemil"
             android:scaleType="fitCenter"
             android:src="@drawable/bg_logo2" />
@@ -33,12 +30,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="10dp"
             android:text="Kopi dan Nyemil"
             android:textColor="@color/charcoal"
             android:textSize="18sp"
             android:textStyle="bold" />
-
     </LinearLayout>
-
 </LinearLayout>

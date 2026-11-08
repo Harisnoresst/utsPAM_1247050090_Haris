@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- PLACEHOLDER: ganti dengan gambarmu, lihat catatan di activity_signup.xml -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="400dp"
+    android:height="220dp"
+    android:viewportWidth="400"
+    android:viewportHeight="220">
+    <!-- cangkir -->
+    <path
+        android:fillColor="#33FFFFFF"
+        android:pathData="M160,90h80v36a30,30 0 0,1 -30,30h-20a30,30 0 0,1 -30,-30z" />
+    <path
+        android:pathData="M240,100h8a16,16 0 0,1 0,32h-8"
+        android:strokeColor="#33FFFFFF"
+        android:strokeWidth="6" />
+    <!-- uap -->
+    <path
+        android:pathData="M180,76c-6,-8 6,-14 0,-22M200,76c-6,-8 6,-14 0,-22M220,76c-6,-8 6,-14 0,-22"
+        android:strokeColor="#33FFFFFF"
+        android:strokeLineCap="round"
+        android:strokeWidth="5" />
+</vector>

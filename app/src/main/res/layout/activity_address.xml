@@ -2,70 +2,75 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/paper">
+    android:background="@color/paper"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true"
+    android:scrollbars="none">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="25dp">
+        android:paddingStart="26dp"
+        android:paddingTop="12dp"
+        android:paddingEnd="26dp"
+        android:paddingBottom="28dp">
 
         <TextView
             android:id="@+id/btnBack"
+            style="@style/App.Text.Back"
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:gravity="center_vertical"
-            android:text="@string/back"
-            android:textColor="@color/charcoal"
-            android:textSize="13sp" />
+            android:layout_height="44dp"
+            android:text="@string/back" />
 
         <TextView
+            style="@style/App.Text.Pill"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="28dp"
-            android:letterSpacing="0.12"
-            android:text="@string/last_step"
-            android:textColor="@color/charcoal"
-            android:textSize="10sp"
-            android:textStyle="bold" />
+            android:layout_marginTop="20dp"
+            android:text="@string/last_step" />
 
         <TextView
+            style="@style/App.Text.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/address_title" />
+
+        <TextView
+            style="@style/App.Text.Body"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:text="@string/address_title"
-            android:textColor="@color/charcoal"
-            android:textSize="38sp"
-            android:textStyle="bold" />
+            android:text="@string/address_description" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:lineSpacingExtra="5dp"
-            android:text="@string/address_description"
-            android:textColor="@color/charcoal"
-            android:textSize="14sp" />
-
+        <!-- Kartu alamat utama -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:background="@drawable/bg_card"
+            android:layout_marginTop="26dp"
+            android:background="@drawable/bg_promo"
             android:gravity="center_vertical"
-            android:padding="17dp">
+            android:padding="16dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="⌖"
-                android:textColor="@color/charcoal"
-                android:textSize="24sp" />
+            <FrameLayout
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="@drawable/bg_icon_tile"
+                android:padding="11dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/shipping_address"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_addres" />
+            </FrameLayout>
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
+                android:layout_marginStart="14dp"
                 android:layout_weight="1"
                 android:orientation="vertical">
 
@@ -74,61 +79,81 @@
                     android:layout_height="wrap_content"
                     android:text="@string/main_address"
                     android:textColor="@color/charcoal"
-                    android:textSize="13sp"
+                    android:textSize="14sp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
+                    android:layout_marginTop="3dp"
                     android:text="@string/safe_delivery"
-                    android:textColor="@color/charcoal"
-                    android:textSize="11sp" />
+                    android:textColor="@color/muted"
+                    android:textSize="12sp" />
             </LinearLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="✓"
-                android:textColor="#75A67F"
-                android:textSize="18sp" />
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:background="@drawable/bg_chip"
+                android:contentDescription="Terpilih"
+                android:padding="5dp"
+                android:src="@drawable/ic_check_small" />
         </LinearLayout>
+
+        <TextView
+            style="@style/App.Text.FieldLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/recipient" />
 
         <EditText
             android:id="@+id/inputRecipient"
+            style="@style/App.Input"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="24dp"
-            android:background="@drawable/bg_input"
+            android:layout_height="54dp"
+            android:layout_marginTop="8dp"
             android:hint="@string/full_name"
-            android:padding="14dp" />
+            android:inputType="textPersonName" />
+
+        <TextView
+            style="@style/App.Text.FieldLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/address" />
 
         <EditText
             android:id="@+id/inputAddress"
+            style="@style/App.Input"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="12dp"
-            android:background="@drawable/bg_input"
+            android:layout_height="54dp"
+            android:layout_marginTop="8dp"
             android:hint="@string/address_hint"
-            android:padding="14dp" />
+            android:inputType="textPostalAddress" />
+
+        <TextView
+            style="@style/App.Text.FieldLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/address_detail" />
 
         <EditText
             android:id="@+id/inputDetail"
+            style="@style/App.Input"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="12dp"
-            android:background="@drawable/bg_input"
+            android:layout_height="54dp"
+            android:layout_marginTop="8dp"
             android:hint="@string/detail_hint"
-            android:padding="14dp" />
+            android:inputType="text" />
 
         <Button
             android:id="@+id/btnOrderSend"
+            style="@style/App.Button.Primary"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="18dp"
-            android:background="@drawable/bg_button_primary"
-            android:text="@string/order_send"
-            android:textAllCaps="false"
-            android:textColor="@android:color/white" />
+            android:layout_height="56dp"
+            android:layout_marginTop="28dp"
+            android:text="@string/order_send" />
     </LinearLayout>
 </ScrollView>

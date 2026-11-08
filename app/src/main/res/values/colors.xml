@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Palet asli (tidak diubah) -->
     <color name="cream">#FFFFFF</color>
     <color name="paper">#FFFFFF</color>
     <color name="charcoal">#1E3932</color>
@@ -10,4 +11,9 @@
     <color name="success">#BDEACB</color>
     <color name="success_text">#32744B</color>
     <color name="mint">#E4F2EA</color>
+
+    <!-- Turunan dari palet hijau yang sama (untuk kedalaman & kontras) -->
+    <color name="surface">#F5F9F7</color>
+    <color name="hint">#8FA399</color>
+    <color name="on_dark_muted">#B7D2C3</color>
 </resources>

@@ -1,107 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/charcoal"
-    android:orientation="vertical"
-    android:padding="28dp">
+    android:clipToPadding="false"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true"
+    android:overScrollMode="ifContentScrolls"
+    android:scrollbars="none">
 
-    <!-- Header Brand -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:orientation="horizontal">
-
-        <ImageView
-            android:id="@+id/imgCoffeeIcon"
-            android:layout_width="28dp"
-            android:layout_height="28dp"
-            android:contentDescription="Coffee icon"
-            android:scaleType="fitCenter"
-            android:src="@drawable/bg_logo" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:text="Kopi dan Nyemil"
-            android:textColor="@android:color/white"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-    </LinearLayout>
-
-    <!-- Container Tengah untuk Logo (Mengisi ruang tengah) -->
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
-
-        <!-- Logo Aplikasi (Diperbesar & Center di Tengah) -->
-        <ImageView
-            android:id="@+id/imgLogo"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_gravity="center"
-            android:contentDescription="Logo Kopi dan Nyemil"
-            android:scaleType="fitCenter"
-            android:src="@drawable/bg_logo" />
-
-    </FrameLayout>
-
-    <!-- Section Bawah -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="bottom"
         android:orientation="vertical"
+        android:paddingStart="24dp"
+        android:paddingTop="20dp"
+        android:paddingEnd="24dp"
         android:paddingBottom="24dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:letterSpacing="0.12"
-            android:text="@string/welcome_label"
-            android:textColor="@color/light_brown"
-            android:textSize="10sp" />
-
-        <TextView
+        <!-- Header brand -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="14dp"
-            android:lineSpacingExtra="2dp"
-            android:text="@string/welcome_title"
-            android:textColor="@android:color/white"
-            android:textSize="42sp"
-            android:textStyle="bold" />
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
-        <TextView
+            <ImageView
+                android:id="@+id/imgCoffeeIcon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:contentDescription="Coffee icon"
+                android:scaleType="fitCenter"
+                android:src="@drawable/bg_logo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Kopi dan Nyemil"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:minHeight="200dp">
+
+                <ImageView
+                    android:id="@+id/imgLogo"
+                    android:layout_width="220dp"
+                    android:layout_height="220dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="Logo Kopi dan Nyemil"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/bg_logo" />
+        </FrameLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:lineSpacingExtra="6dp"
-            android:text="@string/welcome_description"
-            android:textColor="#CDC8BE"
-            android:textSize="14sp" />
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/btnStart"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="26dp"
-            android:background="@drawable/bg_button_primary"
-            android:text="@string/start_now"
-            android:textAllCaps="false"
-            android:textColor="@android:color/white" />
+            <TextView
+                style="@style/App.Text.Pill"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_pill_dark"
+                android:text="@string/welcome_label"
+                android:textColor="@color/light_brown"
+                android:textSize="10sp" />
 
+            <TextView
+                style="@style/App.Text.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="@string/welcome_title"
+                android:textColor="@android:color/white"
+                android:textSize="32sp" />
+
+            <TextView
+                style="@style/App.Text.Body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="@string/welcome_description"
+                android:textColor="@color/on_dark_muted"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btnStart"
+                style="@style/App.Button.Light"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/start_now" />
+
+            <!-- Indikator halaman (menggantikan teks "01   02") -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="22dp"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="24dp"
+                    android:layout_height="6dp"
+                    android:background="@drawable/bg_dot_active" />
+
+                <View
+                    android:layout_width="6dp"
+                    android:layout_height="6dp"
+                    android:layout_marginStart="6dp"
+                    android:background="@drawable/bg_dot_inactive" />
+            </LinearLayout>
+        </LinearLayout>
     </LinearLayout>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/welcome_progress"
-        android:textColor="#B5B0A7"
-        android:textSize="11sp" />
-
-</LinearLayout>
+</ScrollView>

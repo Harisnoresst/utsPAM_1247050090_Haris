@@ -10,6 +10,7 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.core.widget.doAfterTextChanged
 
 class HomeActivity : AppCompatActivity() {
@@ -40,15 +41,39 @@ class HomeActivity : AppCompatActivity() {
         findViewById<TextView>(R.id.btnProfileTop).setOnClickListener { openProfile() }
         findViewById<TextView>(R.id.btnProfileBottom).setOnClickListener { openProfile() }
         findViewById<TextView>(R.id.btnOrderBottom).setOnClickListener { openAddress() }
-        findViewById<TextView>(R.id.btnCoffeeCategory).setOnClickListener { renderMenu("Kopi") }
-        findViewById<TextView>(R.id.filterAll).setOnClickListener { renderMenu("Semua") }
-        findViewById<TextView>(R.id.filterCoffee).setOnClickListener { renderMenu("Kopi") }
-        findViewById<TextView>(R.id.filterNonCoffee).setOnClickListener { renderMenu("Non-kopi") }
-        findViewById<TextView>(R.id.filterSnack).setOnClickListener { renderMenu("Cemilan") }
+        findViewById<TextView>(R.id.btnCoffeeCategory).setOnClickListener { selectCategory("Kopi") }
+        findViewById<TextView>(R.id.filterAll).setOnClickListener { selectCategory("Semua") }
+        findViewById<TextView>(R.id.filterCoffee).setOnClickListener { selectCategory("Kopi") }
+        findViewById<TextView>(R.id.filterNonCoffee).setOnClickListener { selectCategory("Non-kopi") }
+        findViewById<TextView>(R.id.filterSnack).setOnClickListener { selectCategory("Cemilan") }
         findViewById<EditText>(R.id.inputSearch).doAfterTextChanged { text ->
+            highlightChip("Semua")
             renderMenu(category = "Semua", query = text?.toString().orEmpty())
         }
         orderButton.setOnClickListener { openAddress() }
+    }
+
+    // Pilih kategori: tampilkan menu sesuai kategori dan tandai chip yang aktif
+    private fun selectCategory(category: String) {
+        highlightChip(category)
+        renderMenu(category)
+    }
+
+    private fun highlightChip(category: String) {
+        val activeId = when (category) {
+            "Kopi" -> R.id.filterCoffee
+            "Non-kopi" -> R.id.filterNonCoffee
+            "Cemilan" -> R.id.filterSnack
+            else -> R.id.filterAll
+        }
+        listOf(R.id.filterAll, R.id.filterCoffee, R.id.filterNonCoffee, R.id.filterSnack).forEach { id ->
+            val chip = findViewById<TextView>(id)
+            val isActive = id == activeId
+            chip.setBackgroundResource(if (isActive) R.drawable.bg_chip_active else R.drawable.bg_chip)
+            chip.setTextColor(
+                ContextCompat.getColor(this, if (isActive) android.R.color.white else R.color.charcoal)
+            )
+        }
     }
 
     private fun renderMenu(category: String, query: String = "") {

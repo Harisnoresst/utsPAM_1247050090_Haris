@@ -1,81 +1,143 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/paper"
-    android:orientation="vertical"
-    android:padding="26dp">
-
-    <include layout="@layout/layout_auth_header" />
+    android:clipToPadding="false"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true"
+    android:overScrollMode="ifContentScrolls"
+    android:scrollbars="none">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:gravity="center_vertical"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:letterSpacing="0.12"
-            android:text="@string/signup_label"
-            android:textColor="@color/charcoal"
-            android:textSize="10sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:lineSpacingExtra="2dp"
-            android:text="@string/signup_title"
-            android:textColor="@color/charcoal"
-            android:textSize="36sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="14dp"
-            android:lineSpacingExtra="5dp"
-            android:text="@string/signup_description"
-            android:textColor="@color/charcoal"
-            android:textSize="14sp" />
-
-        <Button
-            android:id="@+id/btnRegister"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="27dp"
-            android:background="@drawable/bg_button_primary"
-            android:text="@string/create_account"
-            android:textAllCaps="false"
-            android:textColor="@android:color/white" />
-
-        <Button
-            android:id="@+id/btnLogin"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="12dp"
-            android:background="@drawable/bg_button_outline"
-            android:text="@string/existing_account"
-            android:textAllCaps="false"
-            android:textColor="@color/charcoal" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="22dp"
-            android:text="✓  Tanpa biaya tambahan  ·  Data aman"
-            android:textColor="@color/charcoal"
-            android:textSize="11sp" />
-    </LinearLayout>
-
-    <TextView
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Secangkir nyaman, kapan saja."
-        android:textColor="@color/charcoal"
-        android:textSize="11sp" />
-</LinearLayout>
+        android:orientation="vertical"
+        android:paddingStart="26dp"
+        android:paddingTop="12dp"
+        android:paddingEnd="26dp"
+        android:paddingBottom="20dp">
+
+        <include layout="@layout/layout_auth_header" />
+
+        <!--
+            ===== HERO SIGNUP =====
+            Ganti 2 gambar di bawah dengan gambarmu:
+              1) imgSignupHero   -> gambar utama (lebar, disarankan rasio ±16:9, mis. 1200x660)
+              2) imgSignupAccent -> gambar kecil persegi di pojok kiri bawah (mis. 400x400)
+            Taruh file di res/drawable/ lalu ubah android:src, contoh:
+              android:src="@drawable/foto_signup_hero"
+            Gradasi hijau di belakang & gradasi gelap di bawah foto sudah otomatis.
+        -->
+        <FrameLayout
+            android:id="@+id/heroSignup"
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_signup_hero"
+            android:clipToOutline="true">
+
+            <ImageView
+                android:id="@+id/imgSignupHero"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="Ilustrasi Kopi dan Nyemil"
+                android:scaleType="centerCrop"
+                android:src="@drawable/menu_v60" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_gravity="bottom"
+                android:background="@drawable/bg_hero_fade" />
+
+            <ImageView
+                android:id="@+id/imgSignupAccent"
+                android:layout_width="76dp"
+                android:layout_height="76dp"
+                android:layout_gravity="bottom|start"
+                android:layout_margin="16dp"
+                android:background="@drawable/bg_hero_accent_frame"
+                android:clipToOutline="true"
+                android:contentDescription="Menu favorit"
+                android:scaleType="centerCrop"
+                android:src="@drawable/menu_croissant" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="18dp"
+                android:text="Kopi &amp; Nyemil\nsetiap hari"
+                android:textAlignment="viewEnd"
+                android:textColor="@android:color/white"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingTop="24dp"
+            android:paddingBottom="16dp">
+
+
+            <TextView
+                style="@style/App.Text.Pill"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/signup_label" />
+
+            <TextView
+                style="@style/App.Text.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/signup_title" />
+
+            <TextView
+                style="@style/App.Text.Body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/signup_description" />
+
+            <Button
+                android:id="@+id/btnRegister"
+                style="@style/App.Button.Primary"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="32dp"
+                android:text="@string/create_account" />
+
+            <Button
+                android:id="@+id/btnLogin"
+                style="@style/App.Button.Outline"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/existing_account" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="24dp"
+                android:text="✓  Tanpa biaya tambahan  ·  Data aman"
+                android:textColor="@color/muted"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:text="Secangkir nyaman, kapan saja."
+            android:textColor="@color/hint"
+            android:textSize="12sp" />
+    </LinearLayout>
+</ScrollView>
